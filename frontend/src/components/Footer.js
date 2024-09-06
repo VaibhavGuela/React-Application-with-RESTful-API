@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer
       id="contact"
-      className="w-full h-96 bg-black text-white flex flex-col justify-evenly items-center py-8"
+      className="flex flex-col items-center w-full py-8 text-white bg-black h-96 justify-evenly"
     >
       <h1 className="text-3xl font-light">React Application</h1>
       <p className="text-gray-500 max-w-[700px] text-center font-light">
@@ -15,11 +15,29 @@ const Footer = () => {
         a database.
       </p>
       <div className="flex flex-row gap-12 my-4">
-        <FaGithub className="text-white text-2xl hover:text-gray-500 hover:cursor-pointer" />
-        <FaLinkedin className="text-white text-2xl hover:text-gray-500 hover:cursor-pointer" />
-        <FaSquareXTwitter className="text-white text-2xl hover:text-gray-500 hover:cursor-pointer" />
+        <a
+          href="https://github.com/VaibhavGuela"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaGithub className="text-2xl text-white hover:text-gray-500 hover:cursor-pointer" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/vaibhav-guela/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaLinkedin className="text-2xl text-white hover:text-gray-500 hover:cursor-pointer" />
+        </a>
+        <a
+          href="https://twitter.com/VaibhavGuela"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaSquareXTwitter className="text-2xl text-white hover:text-gray-500 hover:cursor-pointer" />
+        </a>
       </div>
-      <p className="text-center font-light">
+      <p className="font-light text-center">
         Copyright ©2024. All rights reserved. Design by Vaibhav Guela.
       </p>
     </footer>

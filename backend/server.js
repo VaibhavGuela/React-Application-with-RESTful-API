@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 
 const app = express();
 
-mongoose.connect("mongodb://localhost:27017/accounts")
+mongoose.connect("mongodb://localhost:27017/accounts");
 
 const db = mongoose.connection;
 db.on("error", (error) => console.error(error));

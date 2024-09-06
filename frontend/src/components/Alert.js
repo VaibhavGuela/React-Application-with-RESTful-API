@@ -13,8 +13,8 @@ const Alert = ({ alertMessage, onClose }) => {
   }, [onClose]);
 
   return (
-    <div className="mt-4 mx-auto w-fit h-fit bg-red-100 p-3 flex flex-row justify-between items-center gap-10 text-red-600 border-l-4 border-red-600 absolute top-0">
-      <p className="text-sm flex flex-row items-center">
+    <div className="absolute top-0 flex flex-row items-center justify-between gap-10 p-3 mx-auto mt-4 text-red-600 bg-red-100 border-l-4 border-red-600 w-fit h-fit">
+      <p className="flex flex-row items-center text-sm">
         <FiAlertTriangle className="mr-2 text-lg" />
         {alertMessage}
       </p>
