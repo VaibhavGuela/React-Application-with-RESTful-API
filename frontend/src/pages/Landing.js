@@ -5,7 +5,8 @@ const Landing = () => {
   const { setToken } = useContext(TokenContext);
 
   const handleLogout = () => {
-    setToken();
+    localStorage.removeItem("token");
+    setToken(null);
   };
 
   return (

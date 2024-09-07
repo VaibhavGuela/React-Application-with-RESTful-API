@@ -9,7 +9,7 @@ import Landing from "./pages/Landing";
 export const TokenContext = createContext();
 
 function App() {
-  const [token, setToken] = useState();
+  const [token, setToken] = useState(localStorage.getItem("token"));
 
   console.log(token);
 

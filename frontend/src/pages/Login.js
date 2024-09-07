@@ -1,12 +1,12 @@
 import React, { useState, useContext } from "react";
 import { TokenContext } from "../App";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 import axios from "axios";
 
 import ReactLogo from "../images/react-logo.png";
 import Alert from "../components/Alert";
 
-import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
+import { IoEyeOutline, IoEyeOffOutline, IoArrowBack } from "react-icons/io5";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -50,6 +50,7 @@ const Login = () => {
         "http://localhost:3001/user/login",
         formData
       );
+      localStorage.setItem("token", result.data.token);
       setToken(result.data.token);
       navigate("/landing");
     } catch (error) {
@@ -58,7 +59,7 @@ const Login = () => {
           ? error.response.data.message
           : "An unexpected error occured!"
       );
-      console.log(error);
+      setShowAlert(true);
     }
   };
 
@@ -66,8 +67,14 @@ const Login = () => {
     <div className="flex items-center justify-center w-full h-screen bg-gradient-to-r from-sky-500 to-indigo-800">
       <form
         onSubmit={handleSubmit}
-        className="h-[520px] w-[350px] bg-white shadow-2xl rounded flex flex-col items-center justify-between box-border px-10 py-10"
+        className="h-[520px] w-[350px] bg-white shadow-2xl rounded flex flex-col items-center justify-between box-border px-10 py-10 relative"
       >
+        <NavLink
+          to="/"
+          className="absolute top-0 left-0 p-3 hover:text-gray-600 hover:cursor-pointer"
+        >
+          <IoArrowBack className="text-2xl" />
+        </NavLink>
         <h1 className="text-3xl font-bold">Login</h1>
         <img
           src={ReactLogo}
