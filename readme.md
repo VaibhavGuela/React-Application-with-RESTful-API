@@ -36,6 +36,6 @@ This is a React front-end application and a NodeJS (with Express) back-end which
 
 **Note: Before proceeding ensure both ports (`3000` & `3001`) are not in use.**
 
-1. Launch the MongoDB Community Server on your local machine. More instructions can be found [here].(https://www.mongodb.com/docs/manual/administration/install-community/)
+1. Launch the MongoDB Community Server on your local machine. More instructions can be found [here](https://www.mongodb.com/docs/manual/administration/install-community/).
 2. Launch the back end service (defaulted to **`PORT 3000`**) by navigating to the following path (in Visual Studio Code) and running the **`npm start`** command: **`/React-Application-with-RESTful-API/frontend`**.
 3. Launch the back end service (defaulted to **`PORT 3001`**) by navigating to the following path (in Visual Studio Code) and running the **`node server`** command: **`/React-Application-with-RESTful-API/backend`**.
