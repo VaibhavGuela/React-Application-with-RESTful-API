@@ -3,13 +3,20 @@
 This is a React front-end application and a NodeJS (with Express) back-end which allows user to register, login and view their details. Data is stored via MongoDB (locally hosted) and Brcypt Encryption is used for password hashing. JSON Web Tokens are also utilised for authentication.
 
 ### Home
-![Home.png](/frontend/readme/home.png?raw=true)
+
+![Home.png](/frontend/github_images/home.png?raw=true)
 
 ### Registration
-![Registration.png](/frontend/readme/registration.png?raw=true)
+
+![Registration.png](/frontend/github_readme_images/registration.png?raw=true)
 
 ### Login
-![Login.png](/frontend/readme/login.png?raw=true)
+
+![Login.png](/frontend/github_readme_images/login.png?raw=true)
+
+### Landing
+
+![Landing.png](/frontend/github_readme_images/landing.png?raw=true)
 
 # Table of Contents
 
