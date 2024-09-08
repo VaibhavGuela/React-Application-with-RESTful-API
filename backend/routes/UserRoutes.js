@@ -68,7 +68,6 @@ router.post("/register", async (req, res) => {
 
     res.status(201).json({ message: "User registered successfully!", token });
   } catch (error) {
-    console.error(error);
     res.status(500).json({ message: "Server error!" });
   }
 });
@@ -111,7 +110,28 @@ router.post("/login", async (req, res) => {
 
     res.status(201).json({ message: "User registered successfully!", token });
   } catch (error) {
-    console.error(error);
+    res.status(500).json({ message: "Server error!" });
+  }
+});
+
+router.get("/user", async (req, res) => {
+  const token = req.header("token");
+
+  if (!token) {
+    return res.status(400).json({ message: "No token provided!" });
+  }
+
+  try {
+    const decodedToken = jwt.verify(token, JWT_SECRET);
+
+    const user = await User.findById(decodedToken.userId).select("-password");
+
+    if (!user) {
+      return res.status(404).json({ message: "User does not exist!" });
+    }
+
+    res.status(200).json({ message: "User retrieved successfully!", user });
+  } catch (error) {
     res.status(500).json({ message: "Server error!" });
   }
 });

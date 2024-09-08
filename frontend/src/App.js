@@ -11,8 +11,6 @@ export const TokenContext = createContext();
 function App() {
   const [token, setToken] = useState(localStorage.getItem("token"));
 
-  console.log(token);
-
   return (
     <TokenContext.Provider value={{ token, setToken }}>
       <BrowserRouter>
