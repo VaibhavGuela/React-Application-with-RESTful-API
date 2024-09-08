@@ -4,7 +4,7 @@ This is a React front-end application and a NodeJS (with Express) back-end which
 
 ### Home
 
-![Home.png](/frontend/github_images/home.png?raw=true)
+![Home.png](/frontend/github_readme_images/home.png?raw=true)
 
 ### Registration
 
