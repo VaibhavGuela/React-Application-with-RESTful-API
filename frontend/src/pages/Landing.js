@@ -1,10 +1,13 @@
 import React, { useContext, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { TokenContext } from "../App";
 
 import { IoMdPerson } from "react-icons/io";
 
 const Landing = () => {
+  const navigate = useNavigate();
+
   const [userData, setUserData] = useState({});
   const { token, setToken } = useContext(TokenContext);
 
@@ -23,11 +26,12 @@ const Landing = () => {
         });
         setUserData(result.data.user);
       } catch (error) {
+        navigate("/");
         console.log(error);
       }
     };
     getUser();
-  }, [token]);
+  }, [token, navigate]);
 
   return (
     <div className="relative flex flex-col items-center justify-center w-full h-screen bg-white">
